@@ -21,8 +21,7 @@ public class ClientEntity {
     private UUID id;
 @Column
     private String nom;
-@Column
-    private String prenom;
+
 @Column
     private String e_mail;
 

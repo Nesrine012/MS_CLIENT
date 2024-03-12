@@ -1,5 +1,6 @@
 package controller;
 
+import entity.ClientEntity;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.boot.autoconfigure.security.oauth2.server.servlet.OAuth2AuthorizationServerProperties;
 import org.springframework.web.bind.annotation.*;
@@ -32,14 +33,14 @@ import java.util.UUID;
         }
 
         @PostMapping("/createUser")
-        public EmEntity createEmployee(@RequestBody EmployeeEntity employee){
-            return service.createEmployee(employee);
+        public ClientEntity createEmployee(@RequestBody ClientEntity employee){
+            return service.CreateClient(employee);
         }
 
         @PutMapping("/update/{id}")
         public void updateEmployeeAge(@PathVariable UUID id,
                                       @RequestParam Integer age ){
-            service.updateEmployeeAge(id,age);
+            service.updateClientAge(id,age);
         }
     }
 
